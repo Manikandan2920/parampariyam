@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" style="color-scheme: dark;"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parampariyam – Oils, Rice &amp; Powders</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@500;700;800&amp;family=Noto+Serif+Tamil:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F5EE;--surface:#FFFFFF;--ink:#1E2A1B;--muted:#5B6657;--green:#2F5A2B;--gold:#D99A0B;--line:#DAD9CB;--onGreen:#F6F5EE;--note:#FFF3D1;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141A12;--surface:#1D261A;--ink:#EEF0E4;--muted:#A5B09F;--green:#7DB36F;--gold:#EDB63A;--line:#2D3829;--onGreen:#141A12;--note:#3A3217}}
+:root[data-theme="dark"]{--bg:#141A12;--surface:#1D261A;--ink:#EEF0E4;--muted:#A5B09F;--green:#7DB36F;--gold:#EDB63A;--line:#2D3829;--onGreen:#141A12;--note:#3A3217}
+*{box-sizing:border-box}html{scroll-behavior:smooth}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.75 'Noto Serif Tamil',Georgia,serif}
+h1,h2,h3,.btn,nav a,.tab,.logo,.add,.price,.sw,.lbl,.lang button{font-family:'Noto Sans Tamil',system-ui,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:26px;color:var(--green)}
+.hr{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+nav a{margin-right:16px;color:var(--ink);text-decoration:none;font-weight:500;font-size:16px}
+.lang{display:inline-flex;border:1.5px solid var(--green);border-radius:99px;overflow:hidden}
+.lang button{background:transparent;color:var(--green);border:0;padding:6px 14px;font-weight:700;font-size:15px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--green);color:var(--onGreen)}
+.hero{padding:48px 0;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(30px,5.6vw,52px);line-height:1.3;margin:0 0 20px;font-weight:800;max-width:20em}
+.hero p{max-width:34em;color:var(--muted);font-size:19px;margin:0 0 28px}
+.btn{display:inline-block;background:var(--green);color:var(--onGreen);padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:700;border:0;cursor:pointer;font-size:16px}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink);margin-left:8px}
+.btn:focus-visible,.tab:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.lang button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+section{padding:48px 0}
+h2{font-size:clamp(26px,4vw,36px);line-height:1.4;margin:0 0 20px}
+.note{background:var(--note);border-left:5px solid var(--gold);padding:10px 16px;border-radius:6px;margin:0 0 22px;font:600 16px/1.6 'Noto Sans Tamil',system-ui,sans-serif}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.tab{background:transparent;color:var(--ink);border:1.5px solid var(--line);padding:8px 18px;border-radius:99px;cursor:pointer;font-weight:500;font-size:15px}
+.tab[aria-pressed="true"]{background:var(--green);color:var(--onGreen);border-color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.sw{height:84px;display:flex;align-items:flex-end;padding:10px 14px;font-weight:700;font-size:14px;color:rgba(0,0,0,.65)}
+.card div.b{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.card h3{margin:0 0 4px;font-size:19px;line-height:1.5}
+.card p{margin:0 0 12px;color:var(--muted);font-size:16px;line-height:1.6;flex:1}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.price{font-weight:700;font-size:17px}
+.add{background:transparent;border:1.5px solid var(--green);color:var(--green);padding:6px 14px;border-radius:6px;cursor:pointer;font-weight:600;font-size:14px}
+.add:hover{background:var(--green);color:var(--onGreen)}
+.order{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:grid;gap:14px;max-width:560px}
+.order ul{margin:0;padding-left:20px;color:var(--muted)}
+.order .note{margin:0}.order a.btn{text-align:center}
+input,textarea,select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit;font-size:16px}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.about h3{margin:0 0 6px;font-size:20px;line-height:1.5;color:var(--green)}.about p{margin:0;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--muted);font-size:16px}
+#editbtn{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+#admin{position:fixed;inset:0;z-index:10;background:var(--bg);overflow:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(40px + env(safe-area-inset-bottom,0px))}
+#admin .in{max-width:900px;margin:0 auto}
+.pblk{display:grid;grid-template-columns:1fr 1fr;gap:8px;border:1px solid var(--line);border-radius:8px;padding:10px;margin-bottom:12px;background:var(--surface)}
+.pblk .cd{display:flex;gap:8px}.pblk input[type=color]{padding:2px;height:42px;width:70px}
+.del{background:transparent;border:1.5px solid #B33;color:#B33;border-radius:6px;height:42px;width:44px;cursor:pointer;font-size:18px}
+.lbl{font-weight:600;font-size:14px;color:var(--muted);margin:14px 0 4px;display:block}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+#msg{margin-top:12px;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}.hero.noimg{grid-template-columns:1fr}
+.himg img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;display:block}
+.pi{width:100%;height:170px;object-fit:cover;display:block;background:var(--line)}
+.up{display:flex;gap:8px;align-items:center;grid-column:1/-1;flex-wrap:wrap}
+.up img{width:64px;height:64px;object-fit:cover;border-radius:6px;border:1px solid var(--line)}
+.sbtn{background:transparent;border:1.5px solid var(--green);color:var(--green);padding:7px 12px;border-radius:6px;cursor:pointer;font:600 14px 'Noto Sans Tamil',system-ui,sans-serif}
+.us{font-size:14px;color:var(--muted)}
+.qb{border:1.5px solid var(--green);background:transparent;color:var(--green);width:30px;height:30px;border-radius:6px;margin-left:6px;cursor:pointer;font-size:16px}
+#sum{margin-top:10px;font:600 15px/1.7 'Noto Sans Tamil',system-ui,sans-serif}#sum .tot{font-size:18px;color:var(--green)}
+input[type=checkbox]{width:auto}
+.payb{border:1.5px dashed var(--green);border-radius:10px;padding:14px;display:grid;gap:10px;justify-items:center;text-align:center}
+.payb input#utr{width:100%}#qr{width:min(260px,100%);border-radius:8px;background:#fff;padding:6px}
+.chk{display:flex;gap:8px;align-items:center;justify-self:start;font-size:16px}
+.zrow{display:grid;grid-template-columns:1.3fr 1.3fr 1fr 1fr 44px;gap:8px;margin-bottom:8px}
+@media(max-width:560px){.zrow{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+@media(max-width:560px){.pblk{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo" id="logo"></div>
+<div class="hr"><nav><a href="#products" data-t="nav_p">Products</a><a href="#why" data-t="nav_w">Why us</a><a href="#order" data-t="nav_o">Order</a></nav>
+<div class="lang" role="group" aria-label="Language"><button type="button" data-l="ta" aria-pressed="false">தமிழ்</button><button type="button" data-l="en" aria-pressed="true">English</button></div></div></header>
+
+<div class="hero noimg" id="hero">
+<div><h1 data-t="h1">Straight from the farm: wood-pressed oils, rice and spice powders.</h1>
+<p data-t="hero_p">We grow, press and grind our own produce, then pack it fresh. Order by the kilo or litre, for your home or your shop.</p>
+<a class="btn" href="#products" data-t="btn_see">See products</a><a class="btn alt" href="#order" data-t="btn_order">Place an order</a></div>
+<div class="himg" id="himg"></div>
+</div>
+
+<section id="products">
+<h2 data-t="h_prod">Our products</h2>
+<div class="note" data-t="courier">Note: Courier charges are extra.</div>
+<div class="tabs" id="tabs"></div>
+<div class="grid" id="grid"></div>
+</section>
+
+<section id="why">
+<h2 data-t="h_why">Why buy from us</h2>
+<div class="about">
+<div><h3 data-t="w1h">Grown by us</h3><p data-t="w1p">We know every field our rice and seeds come from.</p></div>
+<div><h3 data-t="w2h">Pressed and ground in small batches</h3><p data-t="w2p">Oils are wood-pressed and powders are ground to order, so nothing sits for months.</p></div>
+<div><h3 data-t="w3h">No additives</h3><p data-t="w3p">No colour, no preservatives, no blending. What is on the label is what is in the pack.</p></div>
+</div>
+</section>
+
+<section id="order">
+<h2 data-t="h_order">Place an order</h2>
+<div class="order">
+<div><strong data-t="your_order">Your order</strong><ul id="list"></ul></div>
+<div id="zwrap" hidden=""><label class="lbl" data-t="z_area">Your delivery area (courier)</label><select id="zone" aria-label="Area"><option value="">— Select your area —</option></select><div id="sum"></div></div>
+<div class="note" data-t="courier">Note: Courier charges are extra.</div>
+<input id="name" data-tp="ph_name" placeholder="Your name" aria-label="Your name">
+<input id="cph" type="tel" inputmode="tel" autocomplete="tel" data-tp="ph_phone" placeholder="Your phone number" aria-label="Your phone number">
+<textarea id="addr" rows="2" data-tp="ph_addr" placeholder="Delivery address or city" aria-label="Delivery address or city"></textarea>
+<div id="pay" class="payb"><div class="note" id="paynote">Scan the QR below and pay ₹320. After paying, enter the transaction ID and send your order. (Courier charges extra)</div><img id="qr" alt="UPI QR" hidden><div class="us" id="upitxt">UPI ID: manikandan29012002@oksbi (Manikandan N)</div><input id="utr" type="text" autocomplete="off" data-tp="ph_utr" placeholder="UPI transaction ID (UTR)" aria-label="UPI transaction ID (UTR)"><label class="chk"><input type="checkbox" id="paid"><span data-t="paid_chk">I have paid</span></label></div>
+<div id="omsg" role="status" style="color:#B33;font-size:15px">Please pay first, enter the transaction ID and tick “I have paid”.</div>
+<a class="btn" id="send" target="_top" rel="noopener" href="#" data-t="send">Send order on WhatsApp</a>
+<div id="fb" hidden=""><div class="us" id="fbhint"></div><textarea id="otext" rows="6" readonly="" onfocus="this.select()"></textarea></div>
+<a class="btn alt" id="call" style="margin:0;text-align:center" target="_top" href="tel:+916383003561" data-t="call">Call us</a>
+</div>
+</section>
+
+<footer id="foot"></footer>
+</div>
+
+<button class="btn" id="editbtn" hidden="">Edit products</button>
+<div id="admin" hidden=""></div>
+
+<script type="application/json" id="data">{"upiid":"manikandan29012002@oksbi","upiname":"Manikandan N","upiqr":"","zones":[{"n":"ஈரோடு / கொடுமுடி சுற்றுப்பகுதி","n2":"Erode & nearby","f":"","e":"200"},{"n":"தமிழ்நாடு","n2":"Tamil Nadu","f":"","e":""},{"n":"தென்னிந்தியா (மற்ற மாநிலங்கள்)","n2":"Other South India","f":"","e":""},{"n":"இந்தியாவின் பிற பகுதிகள்","n2":"Rest of India","f":"","e":""}],"ph":"d9ebdb740e189e9de404239a655ad7bfad2f831625519f088728cd12412fba0a","hero":"","brand":"பாரம்பரியம்","brand2":"Parampariyam","whatsapp":"916383003561","contact":"தொலைபேசி: +91 6383003561 · மின்னஞ்சல்: mani29012002@gmail.com · வளந்தன்கோட்டை, இச்சிப்பாளையம் அஞ்சல், கொடுமுடி வழி, ஈரோடு மாவட்டம்","contact2":"Phone: +91 6383003561 · Email: mani29012002@gmail.com · Valanthankottai, Ichippalayam (PO), Kodumudi (via), Erode District","products":[{"n":"வேர்க்கடலை எண்ணெய்","n2":"Groundnut oil","c":"எண்ணெய்","c2":"Oils","a":"₹320","u":"l","d":"மரச்செக்கில் ஆட்டியது, பொன்னிறம், கடலை மணம். தினசரி சமையலுக்கு ஏற்றது.","d2":"Wood-pressed, golden and nutty. Good for everyday cooking.","w":"","col":"#e8b84a","img":""},{"n":"நல்லெண்ணெய்","n2":"Sesame (gingelly) oil","c":"எண்ணெய்","c2":"Oils","a":"₹420","u":"l","d":"பாரம்பரிய செக்கில் ஆட்டிய எள் எண்ணெய்.","d2":"Sesame oil pressed in the traditional chekku.","w":"","col":"#c98a2b","img":""},{"n":"தேங்காய் எண்ணெய்","n2":"Coconut oil","c":"எண்ணெய்","c2":"Oils","a":"₹380","u":"l","d":"உலர்ந்த கொப்பரையிலிருந்து, தூய தேங்காய் மணத்துடன்.","d2":"Made from dried copra, with a pure coconut aroma.","w":"","col":"#ede3c4","img":""},{"n":"சோனா மசூரி அரிசி","n2":"Sona Masuri rice","c":"அரிசி","c2":"Rice","a":"₹62","u":"kg","d":"லேசான, மென்மையான அரிசி, தினசரி உணவுக்கு.","d2":"Light, soft rice for daily meals.","w":"","col":"#efebdd","img":""},{"n":"சிவப்பரிசி","n2":"Red rice","c":"அரிசி","c2":"Rice","a":"₹85","u":"kg","d":"தீட்டப்படாதது, நார்ச்சத்து நிறைந்தது, சுவை மிக்கது.","d2":"Unpolished, rich in fibre and full of flavour.","w":"","col":"#b9694e","img":""},{"n":"கருப்பு கவுனி அரிசி","n2":"Karuppu Kavuni (black) rice","c":"அரிசி","c2":"Rice","a":"₹140","u":"kg","d":"ஆன்டிஆக்சிடன்ட் நிறைந்தது. சமைத்தால் ஊதா நிறம்.","d2":"Rich in antioxidants. Turns purple when cooked.","w":"","col":"#5b4a6b","img":""},{"n":"மஞ்சள் தூள்","n2":"Turmeric powder","c":"பொடிகள்","c2":"Powders","a":"₹220","u":"kg","d":"அடர் மஞ்சள் நிறம், வெயிலில் காயவைத்து கல்லில் அரைத்தது.","d2":"Deep yellow, sun-dried and stone-ground.","w":"","col":"#e0a210","img":""},{"n":"மிளகாய் தூள்","n2":"Chilli powder","c":"பொடிகள்","c2":"Powders","a":"₹360","u":"kg","d":"பிரகாசமான சிவப்பு, உண்மையான மிளகாய் காரம்.","d2":"Bright red with real chilli heat.","w":"","col":"#c0392b","img":""},{"n":"மல்லித் தூள்","n2":"Coriander powder","c":"பொடிகள்","c2":"Powders","a":"₹180","u":"kg","d":"புதிதாக அரைத்தது, சூடான, எலுமிச்சை மணம்.","d2":"Freshly ground, warm and citrusy.","w":"","col":"#9daa5c","img":""}]}</script>
+
+<script>
+var T={
+ta:{nav_p:"பொருட்கள்",nav_w:"ஏன் நாங்கள்",nav_o:"ஆர்டர்",
+h1:"பண்ணையிலிருந்து நேரடியாக: மரச்செக்கு எண்ணெய், அரிசி, மசாலாப் பொடிகள்.",
+hero_p:"நாங்களே விளைவித்து, செக்கில் ஆட்டி, அரைத்து, புதிதாகப் பேக் செய்கிறோம். உங்கள் வீட்டிற்கோ கடைக்கோ கிலோ அல்லது லிட்டர் கணக்கில் ஆர்டர் செய்யலாம்.",
+btn_see:"பொருட்களைப் பார்க்க",btn_order:"ஆர்டர் செய்ய",h_prod:"எங்கள் பொருட்கள்",courier:"குறிப்பு: கூரியர் கட்டணம் தனி (கூடுதல்).",
+h_why:"ஏன் எங்களிடம் வாங்க வேண்டும்",w1h:"நாங்களே விளைவிக்கிறோம்",w1p:"எங்கள் அரிசியும் விதைகளும் வரும் ஒவ்வொரு வயலையும் நாங்கள் அறிவோம்.",
+w2h:"சிறு தொகுதிகளில் ஆட்டி, அரைக்கிறோம்",w2p:"எண்ணெய் மரச்செக்கில் ஆட்டப்படுகிறது. பொடிகள் ஆர்டருக்கு ஏற்ப அரைக்கப்படுகின்றன, அதனால் மாதக்கணக்கில் தேங்குவதில்லை.",
+w3h:"கலப்படம் இல்லை",w3p:"நிறமி இல்லை, பதப்படுத்திகள் இல்லை, கலப்பு இல்லை. லேபிளில் உள்ளதே பையில் இருக்கும்.",
+h_order:"ஆர்டர் செய்யுங்கள்",your_order:"உங்கள் ஆர்டர்",empty:"இன்னும் எதுவும் சேர்க்கவில்லை. ஒரு பொருளில் “சேர்” தட்டவும்.",
+ph_name:"உங்கள் பெயர்",ph_addr:"டெலிவரி முகவரி அல்லது ஊர்",send:"வாட்ஸ்அப்பில் ஆர்டர் அனுப்ப",all:"அனைத்தும்",add:"சேர்",added:"சேர்த்தாச்சு ✓",
+alert:"முதலில் குறைந்தது ஒரு பொருளைச் சேர்க்கவும்.",msg_hello:"வணக்கம், நான் ஆர்டர் செய்ய விரும்புகிறேன்:",msg_name:"பெயர்",msg_addr:"முகவரி",msg_courier:"(கூரியர் கட்டணம் தனி)",call:"எங்களை அழைக்க",ph_phone:"உங்கள் தொலைபேசி எண்",msg_phone:"தொலைபேசி",need_phone:"உங்கள் தொலைபேசி எண்ணை உள்ளிடவும் (10 இலக்கம்).",fb_hint:"வாட்ஸ்அப் திறக்கவில்லையா? இந்த செய்தியை நகலெடுத்து இந்த எண்ணுக்கு அனுப்புங்கள்:",
+edit_btn:"பொருட்களைத் திருத்த",tagline:"எண்ணெய், அரிசி, பொடிகள்",
+e_title:"உங்கள் வலைத்தளத்தைத் திருத்துங்கள்",e_brand_ta:"கடையின் பெயர் (தமிழ்)",e_brand_en:"கடையின் பெயர் (ஆங்கிலம்)",
+e_wa:"வாட்ஸ்அப் எண் (நாட்டுக் குறியீட்டுடன், எண்கள் மட்டும், எ.கா. 919876543210)",e_ct_ta:"அடிக்குறிப்பு தொடர்பு வரி (தமிழ்)",e_ct_en:"அடிக்குறிப்பு தொடர்பு வரி (ஆங்கிலம்)",
+e_prods:"பொருட்கள்",e_add:"+ பொருள் சேர்",e_save:"சேமித்து பக்கத்தைப் பதிவிறக்கு",e_cancel:"ரத்து செய்",e_saving:"சேமிக்கிறது…",e_fail:"சேமிக்க முடியவில்லை: ",e_retry:"மீண்டும் முயற்சிக்கவும்",
+e_pw_new:"கடவுச்சொல்லை உருவாக்குங்கள் (குறைந்தது 4 எழுத்துகள்)",e_pw_change:"புதிய கடவுச்சொல் (மாற்ற விரும்பினால் மட்டும்)",e_pw_short:"கடவுச்சொல் குறைந்தது 4 எழுத்துகள் இருக்க வேண்டும்.",
+g_title:"கடவுச்சொல்லை உள்ளிடுங்கள்",g_go:"உள்ளே செல்",g_wrong:"கடவுச்சொல் தவறு.",e_del:"பொருளை நீக்கு",e_color:"அட்டை நிறம்",
+ph_n_ta:"பெயர் – தமிழ்",ph_n_en:"பெயர் – ஆங்கிலம்",ph_c_ta:"வகை – தமிழ்",ph_c_en:"வகை – ஆங்கிலம்",ph_price:"விலை எ.கா. ₹100",ph_d_ta:"விளக்கம் – தமிழ்",ph_d_en:"விளக்கம் – ஆங்கிலம்",e_hero:"தலைப்புப் படம் (முகப்பில் தலைப்பின் அருகில்)",e_img:"படம் பதிவேற்று",e_rmimg:"படத்தை நீக்கு",e_uploading:"பதிவேற்றுகிறது…",e_noassets:"படம் பதிவேற்ற, உங்கள் Claude கணக்கில் உள்நுழையவும்.",ph_utr:"UPI பரிவர்த்தனை எண் (UTR)",paid_chk:"நான் பணம் செலுத்திவிட்டேன்",need_pay:"முதலில் பணம் செலுத்தி, பரிவர்த்தனை எண்ணை உள்ளிட்டு, “நான் பணம் செலுத்திவிட்டேன்” என்பதைத் தேர்வு செய்யவும்.",upi_id:"UPI ஐடி",pay_note:"கீழே உள்ள QR மூலம் ₹%A% செலுத்துங்கள். பணம் செலுத்திய பிறகு, பரிவர்த்தனை எண்ணை உள்ளிட்டு ஆர்டரை அனுப்புங்கள்.",msg_paid:"பணம் செலுத்தப்பட்டது",msg_txn:"பரிவர்த்தனை எண்",e_upi:"UPI கட்டண விவரங்கள் (UPI ஐடி மற்றும் பெயர்)",e_upiid:"UPI ஐடி",e_upiname:"பெறுநர் பெயர்",e_upiqr:"UPI QR படம்",z_area:"உங்கள் பகுதி (கூரியருக்கு)",z_pick:"— பகுதியைத் தேர்ந்தெடுக்கவும் —",sum_items:"பொருட்கள் மொத்தம்",sum_courier:"கூரியர் (கொடுமுடியிலிருந்து)",sum_total:"மொத்தம்",sum_pick:"பகுதியைத் தேர்ந்தெடுக்கவும்",need_zone:"உங்கள் பகுதியைத் தேர்ந்தெடுக்கவும்.",e_zones:"கூரியர் பகுதிகள் மற்றும் கட்டணம் (கொடுமுடியிலிருந்து): முதல் 1 கிலோவுக்கு ₹, பிறகு ஒவ்வொரு கூடுதல் கிலோவுக்கு ₹. முதல் கிலோ கட்டணம் காலியாக உள்ள பகுதிகள் காட்டப்படாது.",e_addzone:"+ பகுதி சேர்",ph_zf:"முதல் 1 கிலோ ₹",ph_ze:"கூடுதல் கிலோ ₹",ph_w:"எடை (கிலோ / அலகு)"},
+en:{nav_p:"Products",nav_w:"Why us",nav_o:"Order",
+h1:"Straight from the farm: wood-pressed oils, rice and spice powders.",
+hero_p:"We grow, press and grind our own produce, then pack it fresh. Order by the kilo or litre, for your home or your shop.",
+btn_see:"See products",btn_order:"Place an order",h_prod:"Our products",courier:"Note: Courier charges are extra.",
+h_why:"Why buy from us",w1h:"Grown by us",w1p:"We know every field our rice and seeds come from.",
+w2h:"Pressed and ground in small batches",w2p:"Oils are wood-pressed and powders are ground to order, so nothing sits for months.",
+w3h:"No additives",w3p:"No colour, no preservatives, no blending. What is on the label is what is in the pack.",
+h_order:"Place an order",your_order:"Your order",empty:"Nothing added yet. Tap “Add” on a product.",
+ph_name:"Your name",ph_addr:"Delivery address or city",send:"Send order on WhatsApp",all:"All",add:"Add",added:"Added ✓",
+alert:"Add at least one product first.",msg_hello:"Hello, I would like to order:",msg_name:"Name",msg_addr:"Address",msg_courier:"(Courier charges extra)",call:"Call us",ph_phone:"Your phone number",msg_phone:"Phone",need_phone:"Please enter your phone number (10 digits).",fb_hint:"WhatsApp not opening? Copy this message and send it to:",
+edit_btn:"Edit products",tagline:"Oils, Rice & Powders",
+e_title:"Edit your website",e_brand_ta:"Shop name (Tamil)",e_brand_en:"Shop name (English)",
+e_wa:"WhatsApp number (with country code, digits only, e.g. 919876543210)",e_ct_ta:"Footer contact line (Tamil)",e_ct_en:"Footer contact line (English)",
+e_prods:"Products",e_add:"+ Add product",e_save:"Save and download page",e_cancel:"Cancel",e_saving:"Saving…",e_fail:"Could not save: ",e_retry:"try again",
+e_pw_new:"Create a password (at least 4 characters)",e_pw_change:"New password (only if you want to change it)",e_pw_short:"Password must be at least 4 characters.",
+g_title:"Enter password",g_go:"Open",g_wrong:"Wrong password.",e_del:"Delete product",e_color:"Card colour",
+ph_n_ta:"Name – Tamil",ph_n_en:"Name – English",ph_c_ta:"Category – Tamil",ph_c_en:"Category – English",ph_price:"Price e.g. ₹100",ph_d_ta:"Description – Tamil",ph_d_en:"Description – English",e_hero:"Header image (shown beside the main heading)",e_img:"Upload image",e_rmimg:"Remove image",e_uploading:"Uploading…",e_noassets:"Sign in to your Claude account to upload images.",ph_utr:"UPI transaction ID (UTR)",paid_chk:"I have paid",need_pay:"Please pay first, enter the transaction ID and tick “I have paid”.",upi_id:"UPI ID",pay_note:"Scan the QR below and pay ₹%A%. After paying, enter the transaction ID and send your order.",msg_paid:"Payment made",msg_txn:"UPI transaction ID",e_upi:"UPI payment details (UPI ID and name)",e_upiid:"UPI ID",e_upiname:"Payee name",e_upiqr:"UPI QR image",z_area:"Your delivery area (courier)",z_pick:"— Select your area —",sum_items:"Items total",sum_courier:"Courier (from Kodumudi)",sum_total:"Grand total",sum_pick:"select your area",need_zone:"Please select your delivery area.",e_zones:"Courier areas and rates (from Kodumudi): price for the first 1 kg, then price per extra kg. Areas with an empty first-kg price are hidden.",e_addzone:"+ Add area",ph_zf:"First 1 kg ₹",ph_ze:"Each extra kg ₹",ph_w:"Weight (kg per unit)"}};
+var U={l:{ta:"லிட்டர்",en:"litre"},kg:{ta:"கிலோ",en:"kg"},pc:{ta:"எண்ணிக்கை",en:"piece"}};
+var D=JSON.parse(document.getElementById("data").textContent),cur="All",cart={},lang="ta";
+try{lang=localStorage.getItem("lang")==="en"?"en":"ta"}catch(e){}
+var $=function(i){return document.getElementById(i)};
+function t(k){return T[lang][k]||k}
+function L(o,f){return lang==="en"&&o[f+"2"]?o[f+"2"]:o[f]}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function cats(){var a=[];D.products.forEach(function(p){if(a.indexOf(p.c)<0)a.push(p.c)});return a}
+function cl(c){var p=D.products.filter(function(x){return x.c===c})[0];return p?L(p,"c"):c}
+function price(p){return esc(p.a)+" / "+(U[p.u]||U.kg)[lang]}
+function head(){$("call").href="tel:+"+D.whatsapp;var hi=D.hero;$("hero").classList.toggle("noimg",!hi);$("himg").innerHTML=hi?'<img src="'+esc(hi)+'" alt="'+esc(L(D,"brand"))+'">':"";$("logo").textContent=L(D,"brand");$("foot").textContent="© "+L(D,"brand")+" · "+L(D,"contact");document.title=L(D,"brand")+" – "+t("tagline")}
+function tabs(){if(cur!=="All"&&cats().indexOf(cur)<0)cur="All";$("tabs").innerHTML=["All"].concat(cats()).map(function(x){return '<button class="tab" aria-pressed="'+(x===cur)+'" data-c="'+esc(x)+'">'+(x==="All"?t("all"):esc(cl(x)))+'</button>'}).join("")}
+function grid(){$("grid").innerHTML=D.products.map(function(x,i){return {x:x,i:i}}).filter(function(o){return cur==="All"||o.x.c===cur}).map(function(o){var x=o.x;
+return '<article class="card">'+(x.img?'<img class="pi" loading="lazy" src="'+esc(x.img)+'" alt="'+esc(L(x,"n"))+'">':'<div class="sw" style="background:'+esc(x.col)+'">'+esc(L(x,"c"))+'</div>')+'<div class="b"><h3>'+esc(L(x,"n"))+'</h3><p>'+esc(L(x,"d"))+'</p><div class="row"><span class="price">'+price(x)+'</span><button class="add" data-i="'+o.i+'">'+t("add")+'</button></div></div></article>'}).join("")}
+var DEFZ=[{n:"ஈரோடு / கொடுமுடி சுற்றுப்பகுதி",n2:"Erode & nearby",f:"",e:""},{n:"தமிழ்நாடு",n2:"Tamil Nadu",f:"",e:""},{n:"தென்னிந்தியா (மற்ற மாநிலங்கள்)",n2:"Other South India",f:"",e:""},{n:"இந்தியாவின் பிற பகுதிகள்",n2:"Rest of India",f:"",e:""}];
+function num(x){return parseFloat(String(x==null?"":x).replace(/[^0-9.]/g,""))||0}
+function zs(){return (D.zones||[]).filter(function(z){return z.f!==""&&z.f!=null&&!isNaN(Number(z.f))})}
+function totals(){var k=Object.keys(cart),sub=0,w=0;k.forEach(function(i){var p=D.products[i],q=cart[i];sub+=num(p.a)*q;w+=(Number(p.w)>0?Number(p.w):1)*q});
+var z=zs()[$("zone").value],kg=Math.ceil(w-1e-9),ch=null;if(z)ch=Number(z.f)+Math.max(0,kg-1)*(Number(z.e)||0);return {sub:sub,kg:kg,ch:ch,z:z,has:k.length>0}}
+function zopts(){var v=$("zone").value;$("zone").innerHTML='<option value="">'+t("z_pick")+'</option>'+zs().map(function(z,i){return '<option value="'+i+'">'+esc(L(z,"n"))+'</option>'}).join("");$("zone").value=v}
+function calc0(){var Z=zs();$("zwrap").hidden=!Z.length;if(!Z.length){$("sum").innerHTML="";return}
+var x=totals();if(!x.has){$("sum").innerHTML="";return}
+$("sum").innerHTML='<div>'+t("sum_items")+': ₹'+x.sub+'</div><div>'+t("sum_courier")+': '+(x.ch!=null?'₹'+x.ch+' ('+x.kg+' kg)':t("sum_pick"))+'</div>'+(x.ch!=null?'<div class="tot">'+t("sum_total")+': ₹'+(x.sub+x.ch)+'</div>':"")}
+function upiOn(){return !!(D.upiid||D.upiqr)}
+function payAmount(){var x=totals();if(!x.has)return null;if(zs().length){return x.ch==null?null:x.sub+x.ch}return x.sub}
+function payUI(){var p=$("pay");if(!upiOn()){p.hidden=true;return}var a=payAmount();p.hidden=a==null;if(a==null)return;
+$("paynote").textContent=t("pay_note").replace("%A%",a)+(zs().length?"":" "+t("msg_courier"));
+$("qr").hidden=!D.upiqr;if(D.upiqr)$("qr").src=D.upiqr;
+$("upitxt").textContent=(D.upiid?t("upi_id")+": "+D.upiid:"")+(D.upiname?" ("+D.upiname+")":"")}
+function calc(){calc0();payUI()}
+function payLine(){return upiOn()?"\n"+t("msg_paid")+": ₹"+payAmount()+" · "+t("msg_txn")+": "+$("utr").value.trim():""}
+function courierLine(){if(!zs().length)return t("msg_courier");var x=totals();return t("sum_items")+": ₹"+x.sub+"\n"+t("sum_courier")+": ₹"+x.ch+" ("+L(x.z,"n")+", "+x.kg+" kg)\n"+t("sum_total")+": ₹"+(x.sub+x.ch)}
+function list(){var k=Object.keys(cart);$("list").innerHTML=k.length?k.map(function(i){return '<li>'+esc(L(D.products[i],"n"))+' × '+cart[i]+' <button class="qb" type="button" data-m="'+i+'" aria-label="−">−</button><button class="qb" type="button" data-p="'+i+'" aria-label="+">+</button></li>'}).join(""):'<li>'+t("empty")+'</li>';calc()}
+function apply(){document.documentElement.lang=lang;
+document.querySelectorAll("[data-t]").forEach(function(e){e.textContent=t(e.dataset.t)});
+document.querySelectorAll("[data-tp]").forEach(function(e){e.placeholder=t(e.dataset.tp);e.setAttribute("aria-label",t(e.dataset.tp))});
+document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.l===lang))});
+$("editbtn").textContent=t("edit_btn");head();tabs();grid();zopts();list()}
+document.addEventListener("click",function(e){var t2=e.target;
+if(t2.dataset&&t2.dataset.l){lang=t2.dataset.l;try{localStorage.setItem("lang",lang)}catch(x){}apply()}
+if(t2.dataset&&t2.dataset.p){cart[t2.dataset.p]++;list()}
+if(t2.dataset&&t2.dataset.m){var mi=t2.dataset.m;if(--cart[mi]<=0)delete cart[mi];list()}
+if(t2.dataset&&t2.dataset.c){cur=t2.dataset.c;tabs();grid()}
+if(t2.dataset&&t2.dataset.i){var i=t2.dataset.i;cart[i]=(cart[i]||0)+1;list();t2.textContent=t("added");setTimeout(function(){t2.textContent=t("add")},900)}});
+function msg(){var k=Object.keys(cart);return t("msg_hello")+"\n"+k.map(function(i){return "- "+L(D.products[i],"n")+" × "+cart[i]}).join("\n")+"\n"+t("msg_name")+": "+$("name").value+"\n"+t("msg_phone")+": "+$("cph").value+"\n"+t("msg_addr")+": "+$("addr").value+"\n"+courierLine()+payLine()}
+$("zone").addEventListener("change",calc);
+$("send").addEventListener("click",function(e){var om=$("omsg");om.textContent="";
+if(!Object.keys(cart).length){e.preventDefault();om.textContent=t("alert");return}
+if($("cph").value.replace(/\D/g,"").length<10){e.preventDefault();om.textContent=t("need_phone");return}
+if(zs().length&&$("zone").value===""){e.preventDefault();om.textContent=t("need_zone");return}
+if(upiOn()){if(!/^[A-Za-z0-9]{8,30}$/.test($("utr").value.trim())||!$("paid").checked){e.preventDefault();om.textContent=t("need_pay");return}}
+this.href="https://wa.me/"+D.whatsapp+"?text="+encodeURIComponent(msg());
+$("fb").hidden=false;$("otext").value=msg();$("fbhint").textContent=t("fb_hint")+" +"+D.whatsapp});
+apply();
+
+// ---- Owner-only editor (visible only to people who can edit this page) ----
+async function sha(s){var b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode("parampariyam:"+s));return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")}
+function imgup(u,f){return '<div class="up"><img '+(u?'src="'+esc(u)+'"':'hidden')+' alt=""><input type="hidden" data-f="'+f+'" value="'+esc(u||"")+'"><button class="sbtn" type="button" data-up="1">'+t("e_img")+'</button><button class="sbtn" type="button" data-rm="1">'+t("e_rmimg")+'</button><span class="us"></span></div>'}
+function shrink(file){return new Promise(function(res,rej){var im=new Image(),u=URL.createObjectURL(file);im.onload=function(){var s=Math.min(1,1100/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*s);c.height=Math.round(im.height*s);c.getContext("2d").drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);c.toBlob(function(b){b?res(b):rej(new Error("image"))},"image/jpeg",0.82)};im.onerror=function(){rej(new Error("image"))};im.src=u})}
+function upClick(e){var b=e.target,u=b.closest&&b.closest(".up");if(!u)return;var inp=u.querySelector("input"),im=u.querySelector("img"),sp=u.querySelector(".us");
+if(b.dataset.rm){inp.value="";im.hidden=true;im.removeAttribute("src");sp.textContent=""}
+if(b.dataset.up){var f=document.createElement("input");f.type="file";f.accept="image/*";f.onchange=async function(){var file=f.files[0];if(!file)return;sp.textContent=t("e_uploading");try{var bl=await shrink(file);var du=await new Promise(function(res,rej){var fr=new FileReader();fr.onload=function(){res(fr.result)};fr.onerror=rej;fr.readAsDataURL(bl)});inp.value=du;im.src=du;im.hidden=false;sp.textContent="✓"}catch(err){sp.textContent=t("e_fail")+((err&&(err.message||err.code))||"")}};f.click()}}
+function zrow(z){return '<div class="zrow"><input data-f="n" placeholder="'+t("ph_n_ta")+'" value="'+esc(z.n)+'"><input data-f="n2" placeholder="'+t("ph_n_en")+'" value="'+esc(z.n2)+'"><input data-f="f" type="number" min="0" inputmode="decimal" placeholder="'+t("ph_zf")+'" value="'+esc(z.f)+'"><input data-f="e" type="number" min="0" inputmode="decimal" placeholder="'+t("ph_ze")+'" value="'+esc(z.e)+'"><button class="del" type="button" aria-label="'+t("e_del")+'">×</button></div>'}
+function blk(p){return '<div class="pblk"><input data-f="n" placeholder="'+t("ph_n_ta")+'" value="'+esc(p.n)+'"><input data-f="n2" placeholder="'+t("ph_n_en")+'" value="'+esc(p.n2)+'"><input data-f="c" list="cl" placeholder="'+t("ph_c_ta")+'" value="'+esc(p.c)+'"><input data-f="c2" list="cl2" placeholder="'+t("ph_c_en")+'" value="'+esc(p.c2)+'"><input data-f="a" placeholder="'+t("ph_price")+'" value="'+esc(p.a)+'"><select data-f="u" aria-label="Unit">'+Object.keys(U).map(function(k){return '<option value="'+k+'"'+(p.u===k?" selected":"")+'>'+U[k][lang]+'</option>'}).join("")+'</select><input data-f="d" placeholder="'+t("ph_d_ta")+'" value="'+esc(p.d)+'"><input data-f="d2" placeholder="'+t("ph_d_en")+'" value="'+esc(p.d2)+'"><input data-f="w" type="number" step="0.01" min="0" inputmode="decimal" placeholder="'+t("ph_w")+'" value="'+esc(p.w)+'"><div class="cd"><input data-f="col" type="color" aria-label="'+t("e_color")+'" value="'+esc(p.col||"#cccccc")+'"><button class="del" type="button" title="'+t("e_del")+'" aria-label="'+t("e_del")+'">×</button></div>'+imgup(p.img,"img")+'</div>'}
+function openAdmin(){if(!D.ph){openForm();return}var a=$("admin");
+a.innerHTML='<div class="in"><h2>'+t("g_title")+'</h2><input id="pw" type="password" autocomplete="current-password" aria-label="'+t("g_title")+'"><div class="bar"><button class="btn" id="go" type="button">'+t("g_go")+'</button><button class="btn alt" style="margin:0" id="gc" type="button">'+t("e_cancel")+'</button></div><div id="gm" role="status" style="margin-top:12px;color:#B33"></div></div>';a.hidden=false;
+$("pw").focus();$("pw").onkeydown=function(e){if(e.key==="Enter")$("go").click()};
+$("gc").onclick=function(){a.hidden=true};
+$("go").onclick=async function(){if(await sha($("pw").value)===D.ph){openForm()}else{$("gm").textContent=t("g_wrong")}}}
+function openForm(){var a=$("admin");
+a.innerHTML='<div class="in"><h2>'+t("e_title")+'</h2><label class="lbl">'+t("e_hero")+'</label><div id="heroup">'+imgup(D.hero,"hero")+'</div><label class="lbl">'+t("e_brand_ta")+'</label><input id="a_brand" value="'+esc(D.brand)+'"><label class="lbl">'+t("e_brand_en")+'</label><input id="a_brand2" value="'+esc(D.brand2)+'"><label class="lbl">'+t("e_wa")+'</label><input id="a_wa" value="'+esc(D.whatsapp)+'"><label class="lbl">'+t("e_ct_ta")+'</label><input id="a_ct" value="'+esc(D.contact)+'"><label class="lbl">'+t("e_ct_en")+'</label><input id="a_ct2" value="'+esc(D.contact2)+'"><label class="lbl">'+t("e_upi")+'</label><input id="a_upiid" placeholder="'+t("e_upiid")+'" value="'+esc(D.upiid)+'"><input id="a_upiname" style="margin-top:8px" placeholder="'+t("e_upiname")+'" value="'+esc(D.upiname)+'"><label class="lbl">'+t("e_upiqr")+'</label><div id="upiup">'+imgup(D.upiqr,"upiqr")+'</div><label class="lbl">'+t("e_zones")+'</label><div id="zrows">'+(D.zones&&D.zones.length?D.zones:DEFZ).map(zrow).join("")+'</div><div class="bar"><button class="btn alt" style="margin:0" id="addzone" type="button">'+t("e_addzone")+'</button></div><label class="lbl">'+(D.ph?t("e_pw_change"):t("e_pw_new"))+'</label><input id="a_pw" type="password" autocomplete="new-password"><label class="lbl">'+t("e_prods")+'</label><datalist id="cl">'+cats().map(function(x){return '<option value="'+esc(x)+'">'}).join("")+'</datalist><datalist id="cl2">'+cats().map(function(x){return '<option value="'+esc(cl2(x))+'">'}).join("")+'</datalist><div id="rows">'+D.products.map(blk).join("")+'</div><div class="bar"><button class="btn alt" style="margin:0" id="addrow" type="button">'+t("e_add")+'</button></div><div class="bar"><button class="btn" id="save" type="button">'+t("e_save")+'</button><button class="btn alt" style="margin:0" id="cancel" type="button">'+t("e_cancel")+'</button></div><div id="msg" role="status"></div></div>';
+a.hidden=false;
+$("addrow").onclick=function(){$("rows").insertAdjacentHTML("beforeend",blk({n:"",n2:"",c:"",c2:"",a:"",u:"kg",d:"",d2:"",col:"#d9c27a"}))};
+$("rows").onclick=function(e){if(e.target.classList.contains("del"))e.target.closest(".pblk").remove()};
+$("cancel").onclick=function(){a.hidden=true};
+$("addzone").onclick=function(){$("zrows").insertAdjacentHTML("beforeend",zrow({n:"",n2:"",f:"",e:""}))};$("zrows").onclick=function(e){if(e.target.classList.contains("del"))e.target.closest(".zrow").remove()};a.onclick=upClick;$("save").onclick=save}
+function cl2(c){var p=D.products.filter(function(x){return x.c===c})[0];return p?(p.c2||c):c}
+function collect(){var ps=[];
+document.querySelectorAll("#rows .pblk").forEach(function(r){var o={};r.querySelectorAll("[data-f]").forEach(function(i){o[i.dataset.f]=i.value.trim()});
+["n","c","d"].forEach(function(f){if(!o[f])o[f]=o[f+"2"]||"";if(!o[f+"2"])o[f+"2"]=o[f]});
+if(o.n)ps.push(o)});
+var zl=[];document.querySelectorAll("#zrows .zrow").forEach(function(r){var o={};r.querySelectorAll("[data-f]").forEach(function(i){o[i.dataset.f]=i.value.trim()});if(o.n||o.n2){o.n=o.n||o.n2;o.n2=o.n2||o.n;zl.push(o)}});var b=$("a_brand").value.trim(),b2=$("a_brand2").value.trim();
+var c=$("a_ct").value.trim(),c2=$("a_ct2").value.trim();
+D={upiid:$("a_upiid").value.trim(),upiname:$("a_upiname").value.trim(),upiqr:$("upiup").querySelector("input").value,zones:zl,ph:D.ph,hero:$("heroup").querySelector("input").value,brand:b||b2||"பாரம்பரியம்",brand2:b2||b||"Parampariyam",whatsapp:$("a_wa").value.replace(/\D/g,""),contact:c||c2,contact2:c2||c,products:ps}}
+async function save(){var m=$("msg");var np=$("a_pw").value;
+if((!D.ph&&!np)||(np&&np.length<4)){m.textContent=t("e_pw_short");return}
+var ph0=D.ph;collect();D.ph=np?await sha(np):ph0;m.textContent=t("e_saving");
+var c=document.documentElement.cloneNode(true);
+c.querySelector("#data").textContent=JSON.stringify(D).replace(/</g,"\\u003c");
+["tabs","grid","list","admin","logo","foot","himg"].forEach(function(i){var e=c.querySelector("#"+i);if(e)e.innerHTML=""});
+c.querySelector("#admin").hidden=true;c.querySelector("#editbtn").hidden=true;
+try{var q=c.querySelector("#qr");if(q)q.removeAttribute("src");var bl=new Blob(["<!DOCTYPE html>\n"+c.outerHTML],{type:"text/html"});var a2=document.createElement("a");a2.href=URL.createObjectURL(bl);a2.download="index.html";document.body.appendChild(a2);a2.click();a2.remove();m.textContent=lang==="en"?"Downloaded index.html. Upload this file to your website host to publish the changes.":"index.html பதிவிறக்கமாகிவிட்டது. மாற்றங்களை வெளியிட இந்த கோப்பை உங்கள் இணையதளத்தில் பதிவேற்றவும்."}catch(err){m.textContent=t("e_fail")+((err&&err.message)||t("e_retry"))}}
+if(/[?&]admin/.test(location.search)){$("editbtn").hidden=false;$("editbtn").onclick=openAdmin}
+</script>
+
+
+</body></html>
